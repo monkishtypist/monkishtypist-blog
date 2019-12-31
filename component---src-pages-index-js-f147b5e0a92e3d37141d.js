@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{RXBc:function(t,e,a){"use strict";a.r(e);var n=a("sa4T"),i=a("q1tI"),l=a.n(i),s=a("vrFN");e.default=function(){var t=n.data;return l.a.createElement(l.a.Fragment,null,l.a.createElement(s.a,{title:"Home"}),l.a.createElement("h1",null,t.site.siteMetadata.title))}},sa4T:function(t){t.exports=JSON.parse('{"data":{"site":{"siteMetadata":{"title":"Gatsby Blog","description":"A Blog Template Based on an Email Client"}}}}')}}]);
+//# sourceMappingURL=component---src-pages-index-js-f147b5e0a92e3d37141d.js.map
