@@ -44,6 +44,7 @@ const PostInner = styled.div`
 const PostTitle = styled.h1`
   font-size: 1rem;
   margin: 0;
+  margin-bottom: .2rem;
   text-transform: uppercase;
   color: ${props => props.theme.colors.dark};
 `
@@ -51,7 +52,24 @@ const PostTitle = styled.h1`
 const PostDate = styled.h5`
   font-size: .8rem;
   margin: 0;
+  margin-bottom: .25rem;
   color: ${props => props.theme.colors.highlight};
+`
+
+const PostTags = styled.div`
+  display: flex;
+  margin: 0;
+`
+
+const PostTag = styled.span`
+  color: ${props => props.theme.colors.highlight};
+  display: flex;
+  flex: 0 0 auto;
+  font-size: .8rem;
+  margin-right: 1em;
+  &:last-child {
+    margin-right: 0;
+  }
 `
 
 const PostsList = () => {
@@ -67,6 +85,7 @@ const PostsList = () => {
               slug
               title
               date
+              tags
             }
           }
         }
@@ -81,6 +100,11 @@ const PostsList = () => {
           <PostInner>
             <PostDate>{node.frontmatter.date}</PostDate>
             <PostTitle>{node.frontmatter.title}</PostTitle>
+            <PostTags>
+            {node.frontmatter.tags.map(( tag, index) => (
+              <PostTag key={index}>{tag}</PostTag>
+            ))}
+            </PostTags>
           </PostInner>
         </Post>
       ))}

@@ -2,6 +2,7 @@
 slug: "filter-gatsby-content-by-date"
 date: "2019-12-31"
 title: "Filtering Gatsby Source Content by Publish Date"
+tags: ["Gatsby", "Contentful", "data manipulation"]
 ---
 
 I had a not-so-unusual problem the other day while working on another Gatsby/Contentful blog. I needed a way to set a _publish on_ date for posts, and then filter said posts such that content with a future publish date would not be compiled into the blog until said date.
