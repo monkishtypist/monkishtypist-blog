@@ -21,7 +21,11 @@ const PostHeader = styled.div`
 
 const PostTitle = styled.h1``
 
-const PostDate = styled.h5``
+const PostDate = styled.h5`
+  flex: 1 0 auto;
+  max-width: 170px;
+  text-align: right;
+`
 
 const PostBody = styled.div`
 `

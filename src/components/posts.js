@@ -10,7 +10,7 @@ const PostsWrapper = styled.div`
   height: 100vh;
   margin: 0;
   max-height: 100vh;
-  max-width: 25%;
+  max-width: 300px;
   overflow-y: auto;
   padding: 0;
 `
@@ -25,6 +25,10 @@ const Post = styled(Link)`
   &.active {
     background-color: ${props => props.theme.colors.light};
   }
+  &:hover {
+    background-color: ${props => props.theme.colors.light};
+    text-decoration: none;
+  }
 `
 
 const PostInner = styled.div`
@@ -38,18 +42,14 @@ const PostInner = styled.div`
 `
 
 const PostTitle = styled.h1`
-  font-size: ${props => props.theme.fonts.postList.headings.size.h1};
-  font-weight: ${props => props.theme.fonts.postList.headings.weight.h1};
-  line-height: ${props => props.theme.fonts.postList.headings.lineHeight.h1};
+  font-size: 1rem;
   margin: 0;
   text-transform: uppercase;
   color: ${props => props.theme.colors.dark};
 `
 
 const PostDate = styled.h5`
-  font-size: ${props => props.theme.fonts.postList.headings.size.h5};
-  font-weight: ${props => props.theme.fonts.postList.headings.weight.h5};
-  line-height: ${props => props.theme.fonts.postList.headings.lineHeight.h5};
+  font-size: .8rem;
   margin: 0;
   color: ${props => props.theme.colors.highlight};
 `

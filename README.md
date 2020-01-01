@@ -22,7 +22,7 @@ gatsby develop
 
 Then browse to [localhost:8000][localhost]
 
-## Deploy: GitHub Pages (Staging)
+## Deploy: GitHub Pages
 
 To deploy the site to GitHub pages run:
 ```bash
@@ -31,22 +31,14 @@ yarn run deploy
 
 This will execute the commend `GATSBY_ACTIVE_ENV=gh-pages gatsby build --prefix-paths && gh-pages -d public` which will set our environment vars, build our Gatsby files, and then push them to GitHub Pages branch.
 
-From there browse to [monkishtypist.github.io/littlefinchmedia][3] to preview the site.
+From there browse to [monkishtypist.github.io/monkishtypist-blog][3] to preview the site.
 
 To learn more, see the article ["How Gatsby Works with GitHub Pages"][2].
-
-## Deploy: Netlify (Production)
-
-To deploy to production, simply `git push origin master` and Netlify will build and serve our site.
 
 ---
 ## Powered By
 <a href="https://www.gatsbyjs.org">
   <img src="https://www.gatsbyjs.org/Gatsby-Monogram.svg" width=52 />
-</a>
-
-<a href="https://www.netlify.com">
-  <img src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg" />
 </a>
 
 <a href="https://github.com">
@@ -56,4 +48,4 @@ To deploy to production, simply `git push origin master` and Netlify will build 
 [localhost]: http://localhost:8000/
 [1]: https://www.gatsbyjs.org/docs/quick-start/
 [2]: https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/
-[3]: https://monkishtypist.github.io/gatsby-blog/
+[3]: https://monkishtypist.github.io/monkishtypist-blog/
