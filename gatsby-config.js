@@ -3,7 +3,7 @@ require("dotenv").config({
   path: `.env.${activeEnv}`,
 })
 module.exports = {
-  pathPrefix: `/monkishtypist-blog`,
+  pathPrefix: ``, // for GitHub pages, however we are using a custom domain so no prefix necessary
   siteMetadata: {
     title: `Monkishtypist Blog`,
     description: `A Blog.`,
