@@ -70,6 +70,15 @@ const typography = new Typography({
     },
     'pre > code': {
       border: 'none',
+    },
+    label: {
+      color: `${theme.colors.highlight}`,
+      fontWeight: 500,
+      fontSize: '.8rem',
+      textTransform: 'uppercase',
+    },
+    'label>input,label>textarea': {
+      fontSize: '1rem',
     }
   })
 })

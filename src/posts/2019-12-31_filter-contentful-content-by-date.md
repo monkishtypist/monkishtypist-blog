@@ -1,7 +1,7 @@
 ---
 slug: "filter-contentful-content-by-date"
 date: "2019-12-31"
-title: "Filtering Contentful Sourced Content by Publish Date"
+title: "Filtering Contentful Content by Publish Date"
 tags: ["Gatsby", "Contentful", "data manipulation"]
 ---
 

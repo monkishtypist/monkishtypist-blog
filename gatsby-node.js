@@ -1,7 +1,7 @@
 const path = require(`path`)
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
 
   const postTemplate = path.resolve(`src/templates/post.js`)
 
@@ -28,7 +28,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  result.data.allMarkdownRemark.edges.forEach(({ node }, index ) => {
+    if (index === 0) {
+      createRedirect({ fromPath: '/blog', toPath: `/blog/${node.frontmatter.slug}`, isPermanent: true })
+    }
     createPage({
       path: `/blog/${node.frontmatter.slug}`,
       component: postTemplate,
