@@ -39,7 +39,7 @@ export const login = () => {
 
 const setSession = (cb = () => {}) => (err, authResult) => {
   if (err) {
-    navigate("/")
+    navigate("/") // this is causing the site to redirect Home when refreshing any page
     cb()
     return
   }

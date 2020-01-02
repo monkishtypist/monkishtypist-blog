@@ -128,7 +128,7 @@ const MainMenu = () => {
       {data.allMarkdownRemark.edges.map(({ node }, index) => (
         <MenuLink
           key={ index }
-          to={`/blog/${node.frontmatter.slug}`}
+          to={`/${node.frontmatter.slug}`}
           activeClassName="active"
           partiallyActive={true}
         >

@@ -10,7 +10,7 @@ const HiddenInput = styled.input`
 
 const ContactForm = ({ className }) => {
   const [status, setStatus] = useState()
-  const action = process.env.GATSBY_FORMSPREE_ACTION
+  const action = process.env.GATSBY_FORMSPREE_ENDPOINT
 
   function submitForm(ev) {
     ev.preventDefault()

@@ -96,7 +96,7 @@ const PostsList = () => {
   return (
     <PostsWrapper>
       {data.allMarkdownRemark.edges.map(({ node }, index) => (
-        <Post key={index} to={`/blog/${node.frontmatter.slug}`} activeClassName="active">
+        <Post key={index} to={`/${node.frontmatter.slug}`} activeClassName="active">
           <PostInner>
             <PostDate>{node.frontmatter.date}</PostDate>
             <PostTitle>{node.frontmatter.title}</PostTitle>

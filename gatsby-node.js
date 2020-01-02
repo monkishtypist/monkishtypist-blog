@@ -29,11 +29,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   result.data.allMarkdownRemark.edges.forEach(({ node }, index ) => {
-    if (index === 0) {
-      createRedirect({ fromPath: '/blog', toPath: `/blog/${node.frontmatter.slug}`, isPermanent: true })
-    }
     createPage({
-      path: `/blog/${node.frontmatter.slug}`,
+      path: `/${node.frontmatter.slug}`,
       component: postTemplate,
       context: {
         slug: node.frontmatter.slug
