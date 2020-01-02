@@ -1,7 +1,7 @@
 ---
-slug: "filter-gatsby-content-by-date"
+slug: "filter-contentful-content-by-date"
 date: "2019-12-31"
-title: "Filtering Gatsby Source Content by Publish Date"
+title: "Filtering Contentful Sourced Content by Publish Date"
 tags: ["Gatsby", "Contentful", "data manipulation"]
 ---
 
@@ -12,7 +12,7 @@ In theory this should have been a very simple solution. However, while Contentfu
 Therefore to tackle the first problem, we need something that we can access in our GraphQL query. To do this we create a _Publish Date_ field in Contentful for our Post content type. We can then set this field equal to the date we have scheduled for our post. Now when Contentful publishes our post, it can also trigger a webhook to Netlify to deploy our site with the newly published content. Plus we can now access this data in `gatsby-node.js` and sort by our publish date in descending order.
 
 __gatsby-node.js__
-```JavaScript
+```javascript
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   const loadPosts = new Promise((resolve, reject) => {
@@ -52,7 +52,7 @@ To wit I say, "what happens if you need to deploy another change in the meantime
 Fortunately we can use schema customization in Gatsby to achieve this functionality, as noted in [this comment on GitHub][2]. Just add the following to `gatsby-node.js` before our previous query:
 
 __gatsby-node.js__
-```JavaScript
+```javascript
 exports.createSchemaCustomization = ({ actions, schema, getNode }) => {
   actions.createTypes([
     schema.buildObjectType({
@@ -72,7 +72,7 @@ exports.createSchemaCustomization = ({ actions, schema, getNode }) => {
 And then we can use our new schema to filter our previous query like so:
 
 __gatsby-node.js__
-```JavaScript
+```javascript
 graphql(`
   {
     allContentfulPost(

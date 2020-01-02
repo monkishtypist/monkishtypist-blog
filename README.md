@@ -1,42 +1,54 @@
-# Gatsby Blog
+# Monkishtypist Blog
+
+Welcome to my blog. This site is built with Gatsby and uses markdown files for post content. Since my intention is not only blog posts, but also to save some of my favorite code snippets as well, I wanted something that read like an email client therefore making post navigation easier.
+
+## To Do
+- [ ] add Post filtering to help search and narrow down the list
 
 ## Installation
 
-See the [Gatsby Quickstart][1] guide.
+Feel free to fork this repository and make it your own.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/1b35fbfa-389e-4655-87b5-964c88fd1398/deploy-status)](https://app.netlify.com/sites/serene-euler-988cd5/deploys)
+See the [Gatsby Quickstart][quickstart] guide.
 
-### Note on `npm` vs `yarn`
-
-Due to errors with `npm` and `package-lock.json` we are using `yarn` instead. Just a heads up.
+```console
+$ yarn install
+```
 
 ## Develop: Starting the Development Environment
 
-```bash
-yarn run develop
+```console
+$ yarn run develop
 ```
 or...
-```bash
-gatsby develop
+```console
+$ gatsby develop
 ```
 
 Then browse to [localhost:8000][localhost]
 
 ## Deploy: GitHub Pages
 
-To deploy the site to GitHub pages run:
-```bash
-yarn run deploy
+There is an in-depth article on setting up this site on GitHub Pages [here][ghpages]. Everything is already set up in this repository for you to deploy to GitHub Pages. You just need to update your `pathPrefix` in `gatsby-config.js` like so:
+```javascript
+pathPrefix: `/reponame`,
+```
+If however you are using a custom domain then leave `pathPrefix` empty:
+```javascript
+pathPrefix: ``,
 ```
 
-This will execute the commend `GATSBY_ACTIVE_ENV=gh-pages gatsby build --prefix-paths && gh-pages -d public` which will set our environment vars, build our Gatsby files, and then push them to GitHub Pages branch.
+Then to deploy the site to GitHub pages run:
+```console
+$ yarn run deploy
+```
 
-From there browse to [monkishtypist.github.io/monkishtypist-blog][3] to preview the site.
+This will execute the commend `GATSBY_ACTIVE_ENV=gh-pages gatsby build --prefix-paths && gh-pages -d public` which will set our environment vars, build our Gatsby files, and push everything to GitHub Pages branch.
 
-To learn more, see the article ["How Gatsby Works with GitHub Pages"][2].
+From there browse to `http:your-github-username.github.io/reponame` to preview the site.
 
 ---
-## Powered By
+## This Site Powered By
 <a href="https://www.gatsbyjs.org">
   <img src="https://www.gatsbyjs.org/Gatsby-Monogram.svg" width=52 />
 </a>
@@ -46,6 +58,5 @@ To learn more, see the article ["How Gatsby Works with GitHub Pages"][2].
 </a>
 
 [localhost]: http://localhost:8000/
-[1]: https://www.gatsbyjs.org/docs/quick-start/
-[2]: https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/
-[3]: https://monkishtypist.github.io/monkishtypist-blog/
+[quickstart]: https://www.gatsbyjs.org/docs/quick-start/
+[ghpages]: https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/
