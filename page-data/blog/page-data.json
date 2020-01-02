@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-blog-js","path":"/blog/","result":{"data":{"allMarkdownRemark":{"edges":[{"node":{"frontmatter":{"slug":"filter-gatsby-content-by-date","title":"Filtering Gatsby Source Content by Publish Date","date":"2019-12-31"}}}]}},"pageContext":{}}}
+{"componentChunkName":"component---src-pages-blog-js","path":"/blog/","result":{"data":{"allMarkdownRemark":{"edges":[{"node":{"frontmatter":{"slug":"filter-contentful-content-by-date","title":"Filtering Contentful Sourced Content by Publish Date","date":"2019-12-31"}}}]}},"pageContext":{}}}
