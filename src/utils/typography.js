@@ -62,14 +62,25 @@ const typography = new Typography({
       height: 0,
       width: '100%',
     },
-    'code,pre': {
+    code: {
       backgroundColor: `${theme.colors.light}`,
-      border: `.5px solid ${theme.colors.highlight}`,
+      borderColor: `${theme.colors.highlight}`,
+      borderStyle: 'solid',
+      borderWidth: '.5px',
       borderRadius: '3px',
       padding: '.1em .3em',
     },
+    pre: {
+      backgroundColor: `${theme.colors.light}`,
+      borderColor: `${theme.colors.highlight}`,
+      borderStyle: 'solid',
+      borderWidth: '.5px .5px .5px 6px',
+      borderRadius: '0 3px 3px 0',
+      padding: '1px .3em',
+    },
     'pre > code': {
       border: 'none',
+      display: 'inline-block',
     },
     label: {
       color: `${theme.colors.highlight}`,

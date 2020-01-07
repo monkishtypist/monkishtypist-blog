@@ -39,13 +39,13 @@ const ContactForm = ({ className }) => {
       className={`${className || ''}`}
     >
       <label for="name">Name
-        <input type="name" name="name" />
+        <input type="text" name="name" />
       </label>
       <label for="email">Email
         <input type="email" name="email" />
       </label>
       <label for="message">Message
-        <textarea type="text" name="message" />
+        <textarea name="message" />
       </label>
       <HiddenInput type="text" name="_gotcha"/>
       {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
