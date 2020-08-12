@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-blog-js","path":"/blog/","result":{"data":{"allMarkdownRemark":{"edges":[{"node":{"frontmatter":{"slug":"filter-contentful-content-by-date","title":"Filtering Contentful Content by Publish Date","date":"2019-12-31"}}}]}},"pageContext":{}}}
+{"componentChunkName":"component---src-pages-blog-js","path":"/blog/","result":{"pageContext":{}},"staticQueryHashes":["1121140491","2546078437","513618840","63159454"]}
